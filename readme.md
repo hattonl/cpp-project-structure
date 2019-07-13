@@ -88,7 +88,7 @@ project_name
 # 头文件目录结构说明
 
 ```shell
-# example 3rdparty tree
+# example include tree
 include
 └── project_name
     ├── module_1
@@ -109,6 +109,11 @@ include
 1. 针对头文件的包含，顶层 `CMakeLists.txt` 只指定 `${CMAKE_SOURCE_DIR}\include` 和 `${CMAKE_SOURCE_DIR}`，以保证所有的包含规则都是从工程根目录开始包含。
 2. 添加 `include` 目录使得公共头文件和对内部文件可以分离开，使多个模块之间合作开发时项目内部结构更加清晰。
 5. （暂时）在 `3rdparty` 下存放的工程中用到的第三方库和第三方源码。第三方库尽量不要直接把静态连接库直接放到git仓库中，应该另外提供链接以便下载，或者提供文档说明库的名称和版本自行安装下载，或者提供git仓库自行编译。第三方源码一般为开源的，只提供git链接。
+
+# TODO
+
+1. 添加cmake示例。
+2. 添加简单工程示例。
 
 # 参考
 
